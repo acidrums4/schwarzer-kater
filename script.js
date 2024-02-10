@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function()
 				if (!msgWaiting.getAttribute('hidden')) msgWaiting.setAttribute('hidden', '');
 			})
 			.then(function() {
-				form.reset();
 				setTimeout(() => {
 					if (!msgSuccess.getAttribute('hidden')) msgSuccess.setAttribute('hidden', '');
 					if (!msgWarning.getAttribute('hidden')) msgWarning.setAttribute('hidden', '');
@@ -127,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function()
 					if (!successIcon.getAttribute('aria-hidden')) successIcon.setAttribute('aria-hidden', 'true');
 					if (!warningIcon.getAttribute('aria-hidden')) warningIcon.setAttribute('aria-hidden', 'true');
 					if (forsendIcon.getAttribute('aria-hidden')) forsendIcon.removeAttribute('aria-hidden');
+					form.reset();
 					arrivalDatepicker.value = todayDateStr;
 					departureDatepicker.value = tomorrowDateStr;
 				}, 15000);

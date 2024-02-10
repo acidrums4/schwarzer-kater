@@ -812,6 +812,7 @@ input[type="date"]:invalid { border-bottom: 2px solid var(--accnt-2) }
 		background-color: var(--color-5);
 	}
 
+	#kontakt_submit:focus { background-color: var(--color-6) }
 	#kontakt_submit svg { stroke: var(--color-2) }
 }
 
@@ -844,10 +845,15 @@ label {
 	color: var(--color-3);
 }
 
-#kontact_fs_legend span {
+#kontakt_fs_legend span {
 	margin: var(--vgap) 0;
 	line-height: 1.5;
 	color: var(--color-3);
+}
+
+@media (prefers-color-scheme: dark)
+{
+	#kontakt_fs_legend span { color: var(--color-2) }
 }
 
 @media screen and (min-width: 30rem)
